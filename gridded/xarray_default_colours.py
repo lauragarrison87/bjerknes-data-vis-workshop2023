@@ -14,7 +14,7 @@ airtemps = xr.open_dataset('air.mon.mean.nc')
 air = airtemps.air.isel(time=0)
 
 # Set up four subplots
-f, ((ax1, ax2), (ax3, ax4)) = plt.subanywplots(2, 2, figsize=(8, 6))
+f, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(8, 6))
 
 # The first plot (in kelvins) chooses "viridis" and uses the data's min/max
 airk = air + 273.15

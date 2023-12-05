@@ -9,7 +9,7 @@ penguin_species_beak_depth_histo = (
     .mark_bar(opacity=0.3, binSpacing=0)
     .encode(
         alt.X("Beak Depth (mm)", bin=True),
-        alt.Y("count()", stack=True),
+        alt.Y("count()").stack(None),
         alt.Color("Species:N"),
     )
     .properties(title="Penguin Beak Depth by Species")
